@@ -1,0 +1,85 @@
+#A gentle introduction into regular expression
+#Regular expression are used  to filter texts or textstring.
+
+"""
+The special characters are:
+    "."      Matches any character except a newline.
+    "^"      Matches the start of the string.
+    "$"      Matches the end of the string or just before the newline at
+             the end of the string.
+    "*"      Matches 0 or more (greedy) repetitions of the preceding RE.
+             Greedy means that it will match as many repetitions as possible.
+    "+"      Matches 1 or more (greedy) repetitions of the preceding RE.
+    "?"      Matches 0 or 1 (greedy) of the preceding RE.
+    
+    {m,n}    Matches from m to n repetitions of the preceding RE.
+    
+    "\\"     Either escapes special characters or signals a special sequence.
+    []       Indicates a set of characters.
+             A "^" as the first character indicates a complementing set.
+    "|"      A|B, creates an RE that will match either A or B.
+    (...)    Matches the RE inside the parentheses.
+             The contents can be retrieved or matched later in the string.
+
+
+    Examples
+
+        To find a 3 letter a character ending with  at ".at"
+        r" .at "
+        now we get words like "rat","cat","bat",
+     
+        if we want words like "@at", or "3at"
+     
+        r"M[ae][iy]er"  mean first Letter has to be "M"
+                           the second letter can be "a" or "e" 
+                           the third letter should be "i" or "y"
+                           and last two letters must be "er"
+     
+     
+                         __Mai--Maier
+              ----Ma---|
+        M---|              ---May --Mayer
+            |
+            |
+            |            ---Mei---Meier
+             ----Me--|
+                        ---Mey--Meyer
+     
+    r"[a-e][0-5]" -- the first character must be either "a" or "b" or "c" or "d" or "e"
+    and second character must be either 0 or 1 or 2 or 3 or 4 or 5
+     
+    r"[A-Z]"--- first character must b/w uppercase A and Z.
+    for if the character can be either upper and lower case alphabet  re"[A-Za-z]"
+     
+    r"[-ab]"--- the first character can be either "-" or "a" or "b"
+    r"[ab-]"-- the first character can be either "-" or "a" or "b"
+     
+    r"[-a-z]---the first character can be either "-" or any character b/w "a" to "z"
+     
+    special character caret "^"---negating the choices
+    r"[^0-9]" -- any character but a digit
+     
+    r"[^a-c]" --- anything but an "a","b","c"
+     
+    r"[a^bc]" --- the first character can be "a", or "^", "b", "c"
+     
+
+    """
+import re
+
+myDay = "I was born on 27 April 1990"
+pattern =r'([\d]{2})[\s]+([A-z]+)[\s]+([\d]+)' 
+
+comPat = re.compile(pattern)
+birth_day = comPat.search(myDay)
+print("The match object",birth_day) #The match object <_sre.SRE_Match object; span=(14, 27), match='27 April 1990'>
+
+print("The complete match",birth_day.group()) #The complete match 27 April 1990
+
+day = birth_day.group(1)  
+month = birth_day.group(2)
+year = birth_day.group(3) 
+
+print(day)    #27
+print(month)  #April
+print(year)   #1990
