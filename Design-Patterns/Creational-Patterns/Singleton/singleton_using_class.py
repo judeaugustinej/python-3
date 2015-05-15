@@ -27,8 +27,8 @@ if __name__ == "__main__":
 
     y = Singleton([2,3,43],2)  #([2, 3, 43], 2) {}
     print(y)                   #<__main__.Singleton object at 0x03518830>
+    print(y.__dict__)          #('what', 'where') {}
 
     p = Singleton('what','where') #('what', 'where') {}
     print(p)                      #<__main__.Singleton object at 0x03518830>
-        
-
+    print(p.__dict__)             #{'objList': ('what', 'where'), 'objDict': {}}
