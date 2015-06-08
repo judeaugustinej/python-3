@@ -2,11 +2,8 @@
 
 #{} is the placeholder for the substituted variables.
 
-print("My name is {}".format("jude"))
-#My name is jude
-
-line = "My name is {}".format("jude")
-print(line)
+line1 = "My name is {}".format("jude")
+print(line1)
 #My name is jude
 
 
@@ -47,3 +44,32 @@ print(line5)
 line6 = "{0},{0} wait !".format("jude")
 print(line6)
 #jude,jude wait !
+
+################################################
+#"Weight in tons {0.weight}"      # 'weight' attribute of first positional arg
+#"Units destroyed: {players[0]}"  # First element of keyword argument 'players'.
+#"Harold's a clever {0!s}"        # Calls str() on the argument first
+#"Bring out the holy {name!r}"    # Calls repr() on the argument first
+#"More {!a}"                      # Calls ascii() on the argument first
+################################################
+
+class IdCard(object):
+  
+  def __init__(self,name,_id):
+    self.name = name
+    self._id = _id
+    
+  def __str__(self):
+    return "This Id-card belong to {0.name} and his sap-id is {0._id}".format(self)
+    
+  def __repr__(self):
+    return "IdCard({0.name},{0._id})".format(self)
+    
+if __name__ == "__main__":
+  
+  id1 = IdCard("Jude",5535)
+  print(str(id1))  #This Id-card belong to Jude and his sap-id is 5535
+  print(repr(id1)) #IdCard(Jude,5535)
+  
+
+
