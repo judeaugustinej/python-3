@@ -63,7 +63,7 @@ the area is {}
 and perimeter is {}
 """.format(c.radius,c.area,c.perimeter))
 
-#--Output--
+#--Output---
 """
 -sh-3.2$ python3 je1.py
 For a circle of radius 4
