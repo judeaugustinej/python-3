@@ -60,6 +60,7 @@ class IdCard(object):
     self._id = _id
     
   def __str__(self):
+    #{0.name} name attribute of first element.
     return "This Id-card belong to {0.name} and his sap-id is {0._id}".format(self)
     
   def __repr__(self):
