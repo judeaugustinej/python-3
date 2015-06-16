@@ -1,5 +1,9 @@
 """Descriptor Protocol.
-   Any class with __get__,__set__/__delete__ method is called a descriptor
+   
+   Any class with __get__,__set__/__delete__ method is called a descriptor,
+   If an object defines both __get__() and __set__(), it is considered a data descriptor.
+   __get__() is considered to be a non-data descriptor.
+   
    Descriptor are applied on class attributes and not on instance variables.
    
 """
