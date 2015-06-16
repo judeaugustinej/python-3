@@ -3,9 +3,7 @@
    Descriptor are applied on class attributes and not on instance variables.
    
 """
-#checking the value before assigning using ValueDescriptor 
-#An issue with NotImplemented execption in __delete__
-#TypeError: exceptions must derive from BaseException
+
 class ValueDescriptor:
 
     def __init__(self,name):
