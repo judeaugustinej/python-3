@@ -12,6 +12,11 @@ for (key, value) in data:
 
 
 # easy with setdefault
+"""
+ setdefault(...)
+     D.setdefault(k[,d]) -> D.get(k,d), also set D[k]=d if k not in D
+ 
+"""
 new = {}
 for (key, value) in data:
     group = new.setdefault(key, []) # key might exist already
