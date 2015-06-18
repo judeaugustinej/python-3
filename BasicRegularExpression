@@ -83,3 +83,4 @@ year = birth_day.group(3)
 print(day)    #27
 print(month)  #April
 print(year)   #1990
+#work on find,findall,search,compile,replace,sub
