@@ -218,5 +218,3 @@ jude work for google.
 >>> new_info
 'jude is working in goole.\n              jude did is MSC in computer science for national university of singapore\n              and also a MBA from IIM ahmedabad'
 >>> 
-#--- .sub() ---
-#
