@@ -80,10 +80,12 @@ birth_day = comPat.search(myDay)
 print("The match object",birth_day) #The match object <_sre.SRE_Match object; span=(14, 27), match='27 April 1990'>
 
 print("The complete match",birth_day.group()) #The complete match 27 April 1990
-
+"""
 day = birth_day.group(1)  
 month = birth_day.group(2)
 year = birth_day.group(3) 
+"""
+day, month, year = birth_day.group()
 
 print(day)    #27
 print(month)  #April
