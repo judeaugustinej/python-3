@@ -126,10 +126,14 @@ print(new_fields)
 #['asdf', 'fjdk', 'afed', 'fjek', 'asdf', 'foo']
 
 #--- .startswith()----
+"""
 >>> for method in dir(re):
 	if method.startswith('__'):
 		print(method)
-
+"""
+>>> dunder_files = [ file for file in os.listdir('.') if file.startswith('__') ]
+>>> for dunder in dunder_files:
+	print(dunder)
 		
 __all__
 __builtins__
@@ -153,10 +157,14 @@ __version__
 'C:\\Python34\\Lib'
 >>> 
 >>> #Listing the folders only
+"""
 >>> for file in os.listdir('.'):
 	if not file.endswith('.py'):
 		print(file)
-
+"""
+>>> folders = [folder for folder in os.listdir('.') if not file.endswith('.py')]
+>>> for folder in folders:
+	print(folder)
 		
 asyncio
 collections
