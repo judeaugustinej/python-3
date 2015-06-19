@@ -203,4 +203,20 @@ __pycache__
 >>> 'startswith' in dir(str)
 True
 >>> 
-
+>>> sentence = "jude work for hcl."
+>>> new_job = sentence.replace('hcl','google')
+>>> print(new_job)
+jude work for google.
+>>> info = """james is working in goole.
+              james did is MSC in computer science for national university of singapore
+              and also a MBA from IIM ahmedabad"""
+>>> 
+>>> 
+>>> info.count('james')
+2
+>>> new_info = info.replace('james','jude')
+>>> new_info
+'jude is working in goole.\n              jude did is MSC in computer science for national university of singapore\n              and also a MBA from IIM ahmedabad'
+>>> 
+#--- .sub() ---
+#
