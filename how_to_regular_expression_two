@@ -1,0 +1,54 @@
+###for sub,finditer,subn
+#-----------------------Mult-line Flag----------------------------
+"""
+>>> 
+>>> y = re.search(r"Python\.$","I like Python.\nSome prefer Java or Perl.", re.M)
+>>> 
+>>> type(y)
+<class '_sre.SRE_Match'>
+>>> 
+>>> y
+<_sre.SRE_Match object; span=(7, 14), match='Python.'>
+>>> 
+>>> y.span()
+(7, 14)
+>>> 
+>>> type(y.span())
+<class 'tuple'>
+>>> 
+>>> y.span()[0]
+7
+>>> 
+>>> y.start()
+7
+>>> 
+>>> y.span()[1]
+14
+>>> 
+>>> y.end()
+14
+>>> 
+
+
+#-----------------------re.finditer()----------------------------
+>>> 
+>>> pattern = r'Apr(il)*'
+>>> print(re.search(pattern,'when is Apr'))
+<_sre.SRE_Match object; span=(8, 11), match='Apr'>
+>>> 
+>>> print(re.search(pattern,'today is April'))
+<_sre.SRE_Match object; span=(9, 14), match='April'>
+>>> 
+>>> my_month
+'I was born in the month of April.To be exact Apr 27.April ,April what a month.'
+>>> 
+>>> for match in re.finditer(pattern,my_month):
+	print(match)
+
+	
+<_sre.SRE_Match object; span=(27, 32), match='April'>
+<_sre.SRE_Match object; span=(45, 48), match='Apr'>
+<_sre.SRE_Match object; span=(52, 57), match='April'>
+<_sre.SRE_Match object; span=(59, 64), match='April'>
+>>>
+"""

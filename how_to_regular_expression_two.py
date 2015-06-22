@@ -1,1 +1,0 @@
-###for sub,finditer,subn
