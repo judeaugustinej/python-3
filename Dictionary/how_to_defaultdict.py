@@ -1,4 +1,4 @@
-"""Simple usuage of defaultdict,setdefault"""
+"""Simple usuage of defaultdict,setdefault
 
 #----defaultdict-----
 """
