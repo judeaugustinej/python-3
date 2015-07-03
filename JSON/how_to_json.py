@@ -1,6 +1,9 @@
 import json
 
+
 json_string = '{"first_name":"Jude","last_name":"job"}'
+
+#json_string can treated like a dictionary.
 parsed_json = json.loads(json_string)
 
 print("""The json_string = {} ,the parsed_json = {}\\
@@ -16,4 +19,6 @@ The json_string = {"first_name":"Jude","last_name":"job"} ,the parsed_json = {'l
  parsed_json['first_name']= Jude, parsed_json['last_name'] = job
 """
                                                               
-
+jude = {'full name':'Jude Augustine Job',
+        'company':['hcl','google','c-dot']
+        }
