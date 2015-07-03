@@ -13,6 +13,3 @@ jude = '{'name':'jude job',
          }'
 ```
 
-#Why  JSON?
-
-JSON allows us to overcome the cross-domain
