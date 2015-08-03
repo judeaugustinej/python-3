@@ -1,0 +1,23 @@
+"""
+insert(...)
+ |      L.insert(index, object) -- insert object before index
+"""
+
+>>> stuffs = ['spam', 'eggs', 'lumberjack', 'knights', 'ni']
+>>> 
+>>> stuffs
+['spam', 'eggs', 'lumberjack', 'knights', 'ni']
+>>> 
+>>> stuffs.insert(0,stuffs[:])
+>>> 
+>>> for stuff in stuffs:
+	print(stuff)
+
+	
+['spam', 'eggs', 'lumberjack', 'knights', 'ni']
+spam
+eggs
+lumberjack
+knights
+ni
+>>> 
