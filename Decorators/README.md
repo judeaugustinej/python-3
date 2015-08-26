@@ -43,6 +43,31 @@ if __name__ == "__main__":
 I am foo() and Just got decorated
 
 ```
+
+#####Closure Basic
+```
+def outerFoo(num):
+    x = num
+    def innerFoo():
+        print("The number is {}".format(x))
+    return innerFoo
+
+if __name__ == "__main__":
+    outer1 = outerFoo(1)
+    outer1()
+
+    outer2 = outerFoo(2)
+    outer2()
+
+```
+##### Output
+```
+[sunkaray@SUT-LNX-1 decorators]$ python3 closureBasic.py
+The number is 1
+The number is 2
+[sunkaray@SUT-LNX-1 decorators]$
+
+```
 ##### Class Decorators without args
 ```
 class DecoratorsNoArgs:
