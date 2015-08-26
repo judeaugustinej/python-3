@@ -19,7 +19,30 @@ Output
 fooooo
 >>> 
 ```
+###Basic Decorator
+```
+def outerFoo(f):
+    def inner():
+        return f() + " and Just got decorated"
+    return inner
 
+@outerFoo
+def foo():
+    return "I am foo()"
+
+if __name__ == "__main__":
+    print(" decoration")
+    print(foo())
+
+
+```
+####Output
+```
+[sunkaray@SUT-LNX-1 decorators]$ python3 decoratorBasic.py
+ decoration
+I am foo() and Just got decorated
+
+```
 ##### Class Decorators without args
 ```
 class DecoratorsNoArgs:
