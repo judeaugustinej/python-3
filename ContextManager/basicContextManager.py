@@ -1,3 +1,10 @@
+""""
+context manager are enable by using the keywork 'with'
+
+__enter__() is excecuted when the code within the context and
+
+__exit__() is run when the execution leaves the 'with' block
+""""
 class MyContext:
 
     def __init__(self):
