@@ -23,6 +23,8 @@ print(e)
 > Going a step further
 ```
 import sys
+import traceback
+
 try:
     a = 1/0
 except Exception as e:
@@ -31,6 +33,7 @@ except Exception as e:
     print(exc_value.__doc__)
     print(exc_value)
     print(exc_traceback)
+    traceback.print_tb(exc_traceback, limit=1)
     print(exc_type.__name__)
     print("-------------------------")
     raise
@@ -41,11 +44,13 @@ except Exception as e:
 >>> 
 Second argument to a division or modulo operation was zero.
 division by zero
-<traceback object at 0x045C06E8>
+<traceback object at 0x03250148>
+  File "//10.166.0.56/chn-project/VDIFoldered/judeaugustine.j/Desktop/decorators/save_exception.py", line 5, in <module>
+    a = 1/0
 ZeroDivisionError
 -------------------------
 Traceback (most recent call last):
-  File "//10.166.0.56/chn-project/VDIFoldered/judeaugustine.j/Desktop/decorators/save_exception.py", line 3, in <module>
+  File "//10.166.0.56/chn-project/VDIFoldered/judeaugustine.j/Desktop/decorators/save_exception.py", line 5, in <module>
     a = 1/0
 ZeroDivisionError: division by zero
 >>> 
