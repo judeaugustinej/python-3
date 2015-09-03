@@ -19,3 +19,32 @@ except Exception,e:
 ```
 print(e)
 ```
+
+> Going a step further
+```
+import sys
+try:
+    a = 1/0
+except Exception as e:
+    exc_tuple = sys.exc_info()
+    print(exc_tuple[1].__doc__)
+    print(exc_tuple[1])
+    print(exc_tuple[2])
+    print(exc_tuple[0].__name__)
+    print("-------------------------")
+    raise
+```
+####Output
+```
+>>> 
+Second argument to a division or modulo operation was zero.
+division by zero
+<traceback object at 0x045C06E8>
+ZeroDivisionError
+-------------------------
+Traceback (most recent call last):
+  File "//10.166.0.56/chn-project/VDIFoldered/judeaugustine.j/Desktop/decorators/save_exception.py", line 3, in <module>
+    a = 1/0
+ZeroDivisionError: division by zero
+>>> 
+```
