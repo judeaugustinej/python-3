@@ -26,14 +26,16 @@ import sys
 try:
     a = 1/0
 except Exception as e:
-    exc_tuple = sys.exc_info()
-    print(exc_tuple[1].__doc__)
-    print(exc_tuple[1])
-    print(exc_tuple[2])
-    print(exc_tuple[0].__name__)
+
+    exc_type, exc_value, exc_traceback = sys.exc_info()
+    print(exc_value.__doc__)
+    print(exc_value)
+    print(exc_traceback)
+    print(exc_type.__name__)
     print("-------------------------")
     raise
 ```
+
 ####Output
 ```
 >>> 
