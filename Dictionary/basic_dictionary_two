@@ -1,0 +1,14 @@
+>>> """ ways to create dictionary """
+
+>>> my_info = {'name': 'jude', 'age': 25}
+{'age': 25, 'name': 'jude'}
+>>> my_company = dict()
+>>> 
+>>> my_company
+{}
+>>> my_company = dict({'job': 'HCL'})
+>>> 
+>>> my_company
+{'job': 'HCL'}
+>>> 
+
