@@ -12,3 +12,26 @@
 {'job': 'HCL'}
 >>> 
 
+"""
+ |  fromkeys(...)
+ |      dict.fromkeys(S[,v]) -> New dict with keys from S and values equal to v.
+ |      v defaults to None.
+ |  
+ |  get(...)
+ |      D.get(k[,d]) -> D[k] if k in D, else d.  d defaults to None.
+ |  
+ |  has_key(...)
+ |      D.has_key(k) -> True if D has a key k, else False
+"""
+>>> my_company.has_key('job')
+True
+>>> 
+>>> my_company.has_key('name')
+False
+>>> #Example for fromkeys
+>>> l = ['a','b','c']
+>>> d = dict.fromkeys(l, [0,0])
+>>> 
+>>> d
+{'a': [0, 0], 'c': [0, 0], 'b': [0, 0]}
+>>> 
