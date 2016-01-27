@@ -1,0 +1,25 @@
+>>> class Test(object):   #Must be new-style class!
+...  __slots__ = ['x', 'y']
+... 
+>>> pt = Test()
+>>> dir(pt)
+['__class__', '__delattr__', '__doc__', '__getattribute__', '__hash__', 
+ '__init__', '__module__', '__new__', '__reduce__', '__reduce_ex__', 
+ '__repr__', '__setattr__', '__slots__', '__str__', 'x', 'y']
+>>> pt.x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: x
+>>> pt.x = 1
+>>> pt.x
+1
+>>> pt.z = 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'Test' object has no attribute 'z'
+>>> pt.__dict__
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'Test' object has no attribute '__dict__'
+>>> pt.__slots__
+['x', 'y']
